@@ -59,7 +59,9 @@ In order to install Odoo, we will download the code from Github. Furthermore we 
 ### Set up and download code
 
 `sudo cd /opt/odoo`
+
 `sudo mkdir customizations`
+
 `sudo git clone https://www.github.com/odoo/odoo --branch 8.0`
 
 ## Change ownership to odoo user
@@ -70,19 +72,25 @@ In order to install Odoo, we will download the code from Github. Furthermore we 
 We copy the config file to /etc folder:
 
 `sudo cp /opt/odoo/odoo/debian/openerp-server.conf /etc/odoo-server.conf`
+
 `sudo chown odoo: /etc/odoo-server.conf`
+
 `sudo chmod 640 /etc/odoo-server.conf`
 
 We create a log file:
 `sudo mkdir /var/log/odoo`
+
 `sudo chown odoo:root /var/log/odoo`
 
 Run script
 Now we will create a run script:
 
 `cd /etc/init.d/`
+
 `sudo wget https://github.com/mathi123/howtodoo/blob/master/odoo-boot.sh`
+
 `sudo cp odoo-boot.sh odoo`
+
 `sudo rm odoo-boot.sh`
 
 Now make it executable: 
@@ -94,6 +102,7 @@ Now make it executable:
 If you want to start openerp when the machine starts, execute the following commands:
 
 `cd /etc/init.d`
+
 `sudo update-rc.d odoo defaults`
 
 
