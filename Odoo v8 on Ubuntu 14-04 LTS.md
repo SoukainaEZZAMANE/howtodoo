@@ -11,7 +11,9 @@ We will:
 Before starting, update your system:
 
 `sudo apt-get update`
+
 `sudo apt-get dist-upgrade`
+
 `sudo apt-get install git -y`
 
 Next, install the necessary dependencies for Odoo:
@@ -21,6 +23,7 @@ Next, install the necessary dependencies for Odoo:
 Install the most recent version of gdata:
 
 `sudo apt-get install python-pip -y`
+
 `sudo pip install gdata --upgrade`
 
 ## Create a system user for Odoo application
@@ -64,11 +67,11 @@ In order to install Odoo, we will download the code from Github. Furthermore we 
 
 `sudo git clone https://www.github.com/odoo/odoo --branch 8.0`
 
-## Change ownership to odoo user
+### Change ownership to odoo user
 
 `sudo chown -R odoo: *`
 
-## Set config file
+## Setup configuration file
 We copy the config file to /etc folder:
 
 `sudo cp /opt/odoo/odoo/debian/openerp-server.conf /etc/odoo-server.conf`
@@ -78,11 +81,12 @@ We copy the config file to /etc folder:
 `sudo chmod 640 /etc/odoo-server.conf`
 
 We create a log file:
+
 `sudo mkdir /var/log/odoo`
 
 `sudo chown odoo:root /var/log/odoo`
 
-Run script
+## Run script
 Now we will create a run script:
 
 `cd /etc/init.d/`
@@ -99,7 +103,7 @@ Now make it executable:
 
 `sudo chown root: /etc/init.d/odoo`
 
-If you want to start openerp when the machine starts, execute the following commands:
+If you want to start odoo when the machine starts, execute the following commands:
 
 `cd /etc/init.d`
 
