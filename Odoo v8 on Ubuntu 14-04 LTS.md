@@ -91,7 +91,7 @@ Now we will create a run script:
 
 `cd /etc/init.d/`
 
-`sudo wget https://github.com/mathi123/howtodoo/blob/master/odoo-boot.sh`
+`sudo wget https://raw.githubusercontent.com/mathi123/howtodoo/master/odoo-boot.sh`
 
 `sudo cp odoo-boot.sh odoo`
 

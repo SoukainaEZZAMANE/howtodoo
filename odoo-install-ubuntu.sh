@@ -36,7 +36,7 @@ chown odoo:root /var/log/odoo
 
 # init script
 cd /etc/init.d/
-wget https://github.com/mathi123/howtodoo/blob/master/odoo-boot.sh
+wget https://raw.githubusercontent.com/mathi123/howtodoo/master/odoo-boot.sh
 cp odoo-boot.sh odoo
 rm odoo-boot.sh
 chmod 755 /etc/init.d/odoo
